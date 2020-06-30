@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Baloo Bhai 2", cursive;
+}
+
+.first-color {
+  background: #f6f6f6;
+}
+
+.second-color {
+  background: #d6e4f0;
+}
+
+.third-color {
+  background: #1e56a0;
+}
+
+.fourth-color {
+  background: #163172;
+}
+
+.divider-color {
+  background: #bdbdbd;
+}
+
+.background {
+  background: url("./assets/lot.jpg");
+}
+
+.layer {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#form > input {
+  border-color: #1e56a0;
+}
+
+#form > textarea {
+  border-color: #1e56a0;
+}
+
+.banner > img {
+  max-height: 40rem;
+}
+
+.display > img {
+  max-height: 40rem;
+}
+
+@media (max-width: 768px) {
+  .banner > img {
+    max-height: 30rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .banner > img {
+    max-height: 30rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .banner > img {
+    max-height: 30rem;
+  }
+}
