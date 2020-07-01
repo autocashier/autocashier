@@ -34,6 +34,13 @@
     <link rel="stylesheet" href="styles.css" />
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
     <script src="index.js"></script>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0"
+      nonce="8105RxZa"
+    ></script>
 
     <title>Auto Cashier</title>
   </head>
@@ -44,10 +51,11 @@
         <ul class="flex items-center">
           <li class="p-2 hover:underline"><a href="#why-us">Why Us?</a></li>
           <li class="p-2 hover:underline"><a href="#quote">Quote</a></li>
+          <li class="p-2 hover:underline"><a href="#contact">Contact</a></li>
         </ul>
       </div>
       <div class="banner relative">
-        <img class="object-cover w-full" src="./assets/images/lot.jpg" alt="car lot" />
+        <img class="object-cover w-full" src="./assets/images/cars.jpg" alt="2 cars in a field" />
         <div class="slogan layer absolute inset-0 flex flex-col justify-center text-white text-center">
           <h1 class="text-6xl">Auto Cashier</h1>
           <p class="text-xl">Sell your cars and vans here!</p>
@@ -103,12 +111,22 @@
             <p>Get paid</p>
           </li>
         </ol>
+        <div id="contact" class="mt-10 text-2xl">
+          <p>
+            For any other questions don't hesitate to contact us
+            <a class="rounded underline hover:text-blue-600" href="tel:+447852666388">+447852666388</a>
+          </p>
+        </div>
       </div>
       <div id="why-us" class="why-us third-color p-6 text-center text-white">
         <h2 class="text-2xl sm:text-4xl">Why should you choose us?</h2>
         <ol class="mt-5">
-          <li class="mt-2 text-base sm:text-lg">We are a humble family run business established since 2014 based in the heart of East London.</li>
-          <li class="mt-2 text-base sm:text-lg">We buy <b>ANY</b> car or van in <b>ANY</b> condition (including MOT failures & non runners).</li>
+          <li class="mt-2 text-base sm:text-lg">
+            We are a humble family run business established since 2014 based in the heart of East London.
+          </li>
+          <li class="mt-2 text-base sm:text-lg">
+            We buy <b>ANY</b> car or van in <b>ANY</b> condition (including MOT failures & non runners).
+          </li>
           <li class="mt-2 text-base sm:text-lg">We have an upstanding reputation for excellent customer service.</li>
           <li class="mt-2 text-base sm:text-lg">
             We aim to relieve the stress of selling your vehicles so that you can be hassle free.
@@ -203,7 +221,26 @@
           <span id="info"></span>
         </div>
       </div>
-      <div class="footer third-color text-white text-center p-2">&copy; 2020 Auto Cashier</div>
+      <div class="socials text-center flex flex-col md:flex-row justify-evenly">
+        <div
+          class="fb-page"
+          data-href="https://www.facebook.com/autocashier"
+          data-tabs="timeline"
+          data-width=""
+          data-height="530"
+          data-small-header="true"
+          data-adapt-container-width="false"
+          data-hide-cover="false"
+          data-show-facepile="false"
+        >
+          <blockquote cite="https://www.facebook.com/autocashier" class="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/autocashier">Auto Cashier</a>
+          </blockquote>
+        </div>
+        <!-- <div class="instagram mt-10 md:m-0 m-auto"></div>
+        <script async src="//www.instagram.com/embed.js"></script> -->
+      </div>
+      <div class="footer third-color text-white text-center p-2 mt-5">&copy; 2020 Auto Cashier</div>
     </div>
   </body>
 </html>
