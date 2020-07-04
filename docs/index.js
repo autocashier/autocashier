@@ -2,6 +2,11 @@ const init = function () {
   if (document.forms.length === 0) return;
 
   document.getElementById("submit").addEventListener("click", submit);
+  document.getElementById("container").addEventListener("click", () => {
+    let modal = document.getElementById("modal");
+
+    if (!modal.classList.contains("hidden")) modal.classList.add("hidden");
+  });
 };
 
 const submit = function (e) {
@@ -30,6 +35,9 @@ const submit = function (e) {
   e.stopPropagation();
 
   let info = document.getElementById("info");
+  let modal = document.getElementById("modal");
+  modal.classList.remove("hidden");
+
   info.textContent = "Submitting, please stand by...";
 
   const options = {
@@ -44,13 +52,14 @@ const submit = function (e) {
     .then(res => res.json() || res)
     .then(data => {
       if (data.success) {
-        info.style = "color:green";
-        info.textContent = "Your request was submited successfully";
+        info.textContent = "Your quote was submited successfully. Thank you!";
         document.getElementById(document.forms[0].id).reset();
         return;
       }
 
-      info.style = "color:red";
+      info.textContent = "An error occured while trying to submit. Try again later.";
+    })
+    .catch(() => {
       info.textContent = "An error occured while trying to submit. Try again later.";
     });
 };
